@@ -1,0 +1,6 @@
+<?php
+//Instantiate new MemCached instance 
+
+$memcached = new Memcache();
+//Make a connection
+$memcached->

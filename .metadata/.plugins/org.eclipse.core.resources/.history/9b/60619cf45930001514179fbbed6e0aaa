@@ -1,0 +1,9 @@
+<?php
+//Instantiate new MemCached instance 
+
+$memcached = new Memcache();
+//Make a connection
+$host = 'localhost';
+$port = '11211';
+
+$memcached->connect($host, $port);

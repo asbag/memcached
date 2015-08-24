@@ -1,0 +1,19 @@
+<?php
+//Instantiate new MemCached instance 
+
+$memcached = new Memcache();
+//Make a connection
+$host = 'localhost';
+$port = '11211';
+
+$cache = $memcached->connect($host, $port);
+
+
+$dsn='';
+$mysqlengine = 'mysql';
+$database = 'aena';
+
+$username = 'root';
+$password = 'java_innova4b';
+
+$pdo = new PDO($dsn);
