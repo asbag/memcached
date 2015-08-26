@@ -1,5 +1,0 @@
-<?php
-//Instantiate new MemCached instance 
-
-$memcached = new Memcache();
-

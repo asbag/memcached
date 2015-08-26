@@ -1,0 +1,13 @@
+<?php
+/**
+ * @author David Mezquíriz Osés
+ */
+
+include('db.php');
+
+
+$statement = 'select * from demos order by id desc';
+$db->prepare($statement);
+$db->exec($statement);
+
+$memcached = new Memcache();

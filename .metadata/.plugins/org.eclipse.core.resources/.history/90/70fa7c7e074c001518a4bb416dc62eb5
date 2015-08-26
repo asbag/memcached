@@ -1,0 +1,38 @@
+<?php
+/**
+ * @author David Mezquíriz Osés
+ */
+
+include('db.php');
+
+define('MCHOST', 'localhost');
+define('MCPORT', 11211);
+
+
+
+$memcached = new Memcache();
+$memcached->connect(MCHOST,MCPORT) or die('Unable to connect to memcached server, is it running??');
+
+
+//Has to be unique word
+$key = md5('Memcached Example');
+
+$cache_result = array();
+$cache_result = $memcached->get($key);
+
+
+if (isset($cache_result) && !empty($cache_result)) {
+	//Second user request, object is cached in memory
+	$demos_result = $cache_result;
+} else {
+	//First user request, object is not still cached in memory 	
+	try {
+		$statement = 'select * from demos order by id desc';
+		$query_db = $db->query($statement);
+		$demos_array = $query_db->fetchAll();
+		
+		
+	} catch (PDOException $e) {
+		$e->getMessage();
+	}
+}

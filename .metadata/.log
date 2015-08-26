@@ -1,0 +1,50 @@
+!SESSION 2015-08-26 16:35:16.421 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.7.0_79
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.php.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.php.product
+
+!ENTRY org.eclipse.php.core 4 4 2015-08-26 17:02:29.571
+!MESSAGE org.eclipse.dltk.core.ModelException: Index out of bounds
+
+!ENTRY org.eclipse.php.core 4 4 2015-08-26 17:02:29.580
+!MESSAGE org.eclipse.dltk.core.ModelException: Index out of bounds
+
+!ENTRY org.eclipse.jface 2 0 2015-08-26 17:52:01.695
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-08-26 17:52:01.695
+!MESSAGE A conflict occurred for CTRL+R:
+Binding(CTRL+R,
+	ParameterizedCommand(Command(org.eclipse.debug.ui.commands.RunToLine,Run to Line,
+		Resume and break when execution reaches the current line,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1ffd724c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.debugging,,,system)
+Binding(CTRL+R,
+	ParameterizedCommand(Command(com.dubture.symfony.ui.command.insertRoute,Insert Route,
+		Insert a routename at the current cursor position,
+		Category(org.eclipse.ui.category.dialogs,Dialogs,Commands for opening dialogs,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5560b8e2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-26 18:19:22.392
+!MESSAGE An internal error occurred during: "DBGp Response Handler".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.php.internal.debug.core.xdebug.dbgp.DBGpLogger.logException(DBGpLogger.java:78)
+	at org.eclipse.php.internal.debug.core.xdebug.dbgp.session.DBGpSession$AsyncResponseHandlerJob.run(DBGpSession.java:290)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-26 18:19:22.890
+!MESSAGE An internal error occurred during: "DBGp Response Handler".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.php.internal.debug.core.xdebug.dbgp.DBGpLogger.logException(DBGpLogger.java:78)
+	at org.eclipse.php.internal.debug.core.xdebug.dbgp.session.DBGpSession$AsyncResponseHandlerJob.run(DBGpSession.java:290)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)

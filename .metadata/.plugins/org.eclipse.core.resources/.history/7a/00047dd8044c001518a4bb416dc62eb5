@@ -1,0 +1,21 @@
+<?php
+/**
+ * @author David Mezquíriz Osés
+ */
+
+include('db.php');
+
+define('MCHOST', 'localhost');
+define('MCPORT', '11211');
+
+
+try {
+	$statement = 'select * from demos order by id desc';
+	$db->prepare($statement);
+	$db->exec($statement);
+} catch (PDOException $e) {
+	$e->getMessage();
+}
+
+$memcached = new Memcache();
+$memcached->connect(MCHOST,MCPORT);

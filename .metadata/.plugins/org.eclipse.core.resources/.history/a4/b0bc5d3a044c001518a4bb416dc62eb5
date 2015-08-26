@@ -1,0 +1,12 @@
+<?php
+/**
+ * @author David Mezquíriz Osés
+ */
+
+include('db.php');
+
+
+$statement = '';
+$db->prepare($statement);
+
+$memcached = new Memcache();

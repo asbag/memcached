@@ -1,0 +1,19 @@
+<?php
+/**
+ * @author David Mezquíriz Osés
+ * PDO Connection to database
+ */
+ 
+define('USERNAME', 'root');
+define('PASSWORD', 'java_innova4b');
+define('DBENGINE','mysql');
+define('HOST', 'localhost');
+
+$options = array(
+		PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
+);
+$dsn = DBENGINE . ':' . HOST . ;
+
+
+$db = new PDO($dsn);
+

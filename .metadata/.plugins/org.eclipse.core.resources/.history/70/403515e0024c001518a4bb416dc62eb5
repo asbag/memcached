@@ -1,0 +1,11 @@
+<?php
+/**
+ * @author David Mezquíriz Osés
+ * PDO Connection to database
+ */
+ 
+$dsn = '';
+define('USERNAME', 'root');
+define('PASSWORD', 'java_innova4b');
+
+$db = new PDO($dsn);
